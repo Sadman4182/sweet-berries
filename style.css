@@ -1,0 +1,199 @@
+
+
+/* my code */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 160px 1fr 1fr 1fr 150px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/*mobile*/
+@media(max-width: 400px) {
+    .section1 {
+        order: -2;
+    }
+    nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+    #menuchk:checked + nav {
+        
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+        
+        position: absolute;
+        top: 150px;
+        left: 0;
+    }
+}
+
+
+/*tablet*/
+@media(min-width: 401px) and (max-width: 960px) {
+
+    .cooking-skill {
+        width: 50%;
+    }
+}
+
+
+/*desktop*/
+@media(min-width: 961px) {
+
+    .page {
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+
+/* #1 */
+
+.header {
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+}
+
+#menuchk {
+    display: none;
+}
+
+.burger {
+    display: none;
+}
+
+.header img {
+    width: 150px;
+}
+
+.header a {
+    color: #FF4C4C;
+    text-decoration: none;
+    margin-top: 0;
+    margin-right: 0;
+    margin-right: 60px;
+    font-size: 25px;
+}
+
+nav .pinkbtn {
+    background-color:  #A94E97;
+    box-shadow: 1px 22px 20px 5px  #FF4C4C inset;
+    color: white;
+    border-radius: 40px;
+    padding: 13px 25px 10px 20px;
+    font-size: 20px;
+}
+
+/* #2 */
+
+.slogan {
+    grid-column: span 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+/*     justify-items: center; */
+}
+
+.slogan img {
+    width: 570px;
+    height: 260px;
+    margin-right: 20px;
+    border-radius: 28px;
+}
+
+.slogan-text{
+    background-color: white;
+}
+
+.slogan .cooking-course {
+    margin-top: 60px;
+    margin-left: 40px;
+    margin-bottom: 14px;
+    font-size: 40px;
+    color: black;  
+}
+
+.slogan p {
+    margin-left: 40px;
+    font-size: 15px;
+    color: #83869A;
+}
+
+/* #3 */
+
+.main {
+    grid-column: span 3;
+    grid-row: span 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main img {
+    margin-top: -40px;
+}
+
+.main h3 {
+    margin-left: 24px;
+}
+
+.main p {
+    color: #83869A; 
+    margin-left: 24px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.main a {
+    color:  #FF4C4C;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: bold;
+}
+
+ #color {
+    background-color: #A94E97; 
+    box-shadow: 10px 80px 200px 45px #FF4C4C inset;
+}
+
+#size {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    margin: 45px 15px 20px 45px;
+}
+
+.cooking-skill{
+    width: 350px;
+    height: 322px;
+    background-color: white;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    border-radius: 18px;
+    box-shadow: 0px 3px 5px grey;
+}
+
+/* #4 */
+
+.footer {
+    background-color: #FF4C4C;
+    grid-column: span 3;
+    color: white;
+    padding: 12px 0px 20px 20px;
+    font-size: 20px;
+}
